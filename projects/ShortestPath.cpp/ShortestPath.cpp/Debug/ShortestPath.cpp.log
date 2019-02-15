@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\levi-pc\documents\projects\algorithms\algorithms-projects\shortestpath.cpp\shortestpath.cpp\main.cpp(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\levi-pc\documents\projects\algorithms\algorithms-projects\shortestpath.cpp\shortestpath.cpp\csvparser.h(174): warning C4018: '<=': signed/unsigned mismatch
+c:\users\levi-pc\documents\projects\algorithms\algorithms-projects\shortestpath.cpp\shortestpath.cpp\main.cpp(57): error C2143: syntax error: missing ';' before '='
+c:\users\levi-pc\documents\projects\algorithms\algorithms-projects\shortestpath.cpp\shortestpath.cpp\main.cpp(57): error C2059: syntax error: '='
