@@ -8,6 +8,9 @@
 #include <queue>
 using namespace std;
 
+// Creating a class PairComparer. 
+// Has a constructor that takes in the pair of a StringGraphNode pointer and an int as "first" , and again as "second"
+// It will return true or false for the comparison of first's int > second's int
 class PairComparer
 {
 public:
@@ -17,15 +20,22 @@ public:
    }
 };
 
+// Class CampusGraph
+// Has a private variable _graph that is the hashmap of <string, StringGraphNode*>
+// Has public function addVertex by key or by Node
+
 class CampusGraph
 {
 private:
 	unordered_map<string, StringGraphNode*> _graph;
+	queue<string> visited;
 
 public:
 	void addVertex(const string& key)
 	{
-		_graph[key] = new StringGraphNode(key);
+		if (_graph[key] == NULL) {
+			_graph[key] = new StringGraphNode(key);
+		}
 	}
 
 	void addVertex(StringGraphNode* node)
@@ -46,7 +56,21 @@ public:
 		}
 	}
 
-	unordered_map<string, int> computeShortestPath(const string& start)
+	void setVisited(const string& s)
+	{
+		visited.push(s);
+	}
+
+	string getVisited()
+	{
+		string top = visited.pop();
+		visited.pop();
+		return top;
+	}
+
+	//TODO: Need to implement destination. Priority queue. and Choosing the shortest path.
+
+	unordered_map<string, int> computeShortestPath(const string& start, const string& destination)
 	{
 		//return value
 		unordered_map<string, int> distances{};
@@ -66,14 +90,19 @@ public:
 			{
 				auto top = to_visit.top();
 				string key = top.first->getKey();
+				
+
 				int weight = top.second;
 				to_visit.pop();
 
 				//have we seen top before?
+				//This is cool. distances.find(key) will look through itself for the first occurence of 
+				//itself. if it's the last one to be saved, we are good. 
 				if (distances.find(key) == distances.end())
 				{
 					//mark as visited
 					distances[key] = weight;
+
 
 					//push all unknown outoing edges into PQ
 					for (auto edge : top.first->getEdges())

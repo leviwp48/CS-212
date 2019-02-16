@@ -20,6 +20,7 @@ protected:
     //Value of HT is another node in our graph
     unordered_map<GraphNode<Key, Value>*, int> _vertices;
 
+
 public:
 
     GraphNode(const Key &k, const Value &v)
