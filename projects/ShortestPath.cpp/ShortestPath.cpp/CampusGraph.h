@@ -63,9 +63,9 @@ public:
 
 	string getVisited()
 	{
-		string top = visited.pop();
-		visited.pop();
-		return top;
+		//string top = visited.pop();
+		//visited.pop();
+		//return top;
 	}
 
 	//TODO: Need to implement destination. Priority queue. and Choosing the shortest path.

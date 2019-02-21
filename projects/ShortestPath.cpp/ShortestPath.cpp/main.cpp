@@ -34,14 +34,6 @@ int main(void)
 		graph.connectVertex(connections[0], connections[1], stoi(connections[2]), true);
 	}
 
-	/*
-	graph.addVertex("c");
-	graph.connectVertex("a", "c", 15);
-	graph.connectVertex("b", "c", 7, true);
-	auto distances = graph.computeShortestPath("a");
-	*/
-	
-
 	string start = "";
 	string end = "";
 	cout << "**HSU Transit Time Calculator**" << endl;
