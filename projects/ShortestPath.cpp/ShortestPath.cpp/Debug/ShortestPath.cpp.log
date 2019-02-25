@@ -1,4 +1,1 @@
-﻿  main.cpp
-c:\users\levi-pc\documents\projects\cs-212\projects\shortestpath.cpp\shortestpath.cpp\main.cpp(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\levi-pc\documents\projects\cs-212\projects\shortestpath.cpp\shortestpath.cpp\csvparser.h(174): warning C4018: '<=': signed/unsigned mismatch
-  ShortestPath.cpp.vcxproj -> C:\Users\Levi-PC\Documents\Projects\CS-212\projects\ShortestPath.cpp\Debug\ShortestPath.cpp.exe
+﻿  ShortestPath.cpp.vcxproj -> C:\Users\Levi-PC\Documents\Projects\CS-212\projects\ShortestPath.cpp\Debug\ShortestPath.cpp.exe

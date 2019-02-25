@@ -33,21 +33,34 @@ int main(void)
 		}
 		graph.connectVertex(connections[0], connections[1], stoi(connections[2]), true);
 	}
+	
 
 	string start = "";
 	string end = "";
 	cout << "**HSU Transit Time Calculator**" << endl;
-	cout << "Enter starting location: ";
+	char n = ' ';
+	while (n != 'n') {
+	cout << "Enter starting location (A-Z & A2-S2): ";
 	cin >> start;
-	cout << "Enter end location: "; 
+	cout << "Enter end location (A-Z & A2-S2): "; 
 	cin >> end;
 
-
 	unordered_map<string, int> distances = graph.computeShortestPath(start, end);
-
 	
-	cout << "Estimated travel time (seconds): " << distances[end] ;
 
+
+		cout << "Estimated travel time (seconds): " << distances[end] << endl;
+		cout << "To get to " << start << " from " << end << " we need to visit: ";
+
+
+		for (auto x : graph.visited) {
+			cout << x << ", ";
+		}
+
+		cout << "again (y or n): ";
+		cin >> n;
+
+	}
 	
 	
 
