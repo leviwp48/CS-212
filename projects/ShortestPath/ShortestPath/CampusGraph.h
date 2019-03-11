@@ -34,13 +34,14 @@ public:
 
 	void addVertex(const string& key)
 	{
-		if (_graph[key] == NULL) {
+		if (_graph.find(key) == _graph.end())
 			_graph[key] = new StringGraphNode(key);
-		}
+		
 	}
 
 	void addVertex(StringGraphNode* node)
 	{
+		if (_graph.find(key) == _graph.end())
 		_graph[node->getKey()] = node;
 	}
 
